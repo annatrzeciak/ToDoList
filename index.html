@@ -1,35 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>ToDoList</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    </head>
+</head>
+
 <body>
-   
-   <section id="container-fluid" class="full-page">
-       <div class="row">
-           <div class="col-md-10 offset-md-1 text-center">
-               <h1 class="space">To do List</h1>
-               <div class="col-sm-6 offset-sm-3">
-                  <form class="newTaskForm space">
-                  <div class="d-flex">
-                   <input id="inputField"type="text" class="form-control" id="newTask" placeholder="wpisz nowe zadanie">
-                    <input id="addButton" type="submit" class="btn btn-primary"></input>
-                   </div>
-                   </form></div>
-<div class="row"><div class="col-sm-6 "><h3>Zadania:</h3>
-              <ul id="listToDo" class="list-group"><p>Dodaj zadania do wykonania</p></ul></div>
-               <div class="col-sm-6"><h3>Wykonane zadania:</h3><ul id="#listDone" class="list-group"><p>nie masz wykonanych zadań</p></ul></div></div>
-               
-           </div>
-       </div>
-   </section>
-   
+
+    <section id="container-fluid" class="full-page bg-dark text-light">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1 text-center">
+                <h1 class="space text-center">To do List</h1>
+                <div class="col-sm-10 offset-sm-1">
+                    <form class="newTaskForm space">
+
+                        <input id="inputField" type="text" class="form-control space " id="newTask" placeholder="wpisz nowe zadanie">
+                        <h5>Kategoria: </h5>
+                        <div id="categoryButtons" class="btn-group space" data-toggle="buttons">
+                            <label class="btn btn-outline-success">
+    <input type="radio" name="category" data-value="Dom" data-color="success"id="home" autocomplete="off">Dom</label>
+                            <label class="btn btn-outline-primary">
+    <input type="radio" name="category" data-value="Osobiste" data-color="primary"id="personal" autocomplete="off">Osobiste</label>
+                            <label class="btn btn-outline-warning">
+    <input type="radio" name="category" data-value="Praca" data-color="warning"id="work" autocomplete="off">Praca</label>
+                            <label class="btn btn-outline-info">
+    <input type="radio" name="category" data-value="Telefon" data-color="info"id="telephone" autocomplete="off">Telefon</label>
+                            <label class="btn btn-outline-secondary active">
+    <input type="radio" name="category" data-value="Inne" data-color="secondary" id="other" autocomplete="off" checked>Inne</label>
+
+                        </div>
+                        <br>
+                        <input id="addButton" type="submit" class="btn btn-outline-danger"></input>
+
+                    </form>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 ">
+                        <h3>Zadania:</h3>
+                        <ul id="listToDo" class="list-group">
+                            <p>Dodaj zadania do wykonania</p>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6">
+                        <h3>Wykonane zadania:</h3>
+                        <ul id="#listDone" class="list-group">
+                            <p>nie masz wykonanych zadań</p>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-<script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
