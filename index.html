@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
-    <meta charset="UTF-8">
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title>ToDoList</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -14,7 +16,7 @@
         <div class="row">
             <div class="col-lg-10 offset-lg-1 text-center">
                 <h1 class="space text-center">To do List</h1>
-                <div class="col-sm-10 offset-sm-1">
+                <div class="col-xl-10 offset-xl-1 form-section">
                     <form class="newTaskForm space">
 
                         <input id="inputField" type="text" class="form-control space " id="newTask" placeholder="wpisz nowe zadanie">
@@ -22,32 +24,32 @@
                         <div id="categoryButtons" class="btn-group space" data-toggle="buttons">
                             <label class="btn btn-outline-success">
     <input type="radio" name="category" data-value="Dom" data-color="success"id="home" autocomplete="off">Dom</label>
-                            <label class="btn btn-outline-primary">
+                            <label class="btn btn-outline-primary " >
     <input type="radio" name="category" data-value="Osobiste" data-color="primary"id="personal" autocomplete="off">Osobiste</label>
-                            <label class="btn btn-outline-warning">
+                            <label class="btn btn-outline-warning ">
     <input type="radio" name="category" data-value="Praca" data-color="warning"id="work" autocomplete="off">Praca</label>
-                            <label class="btn btn-outline-info">
+                            <label class="btn btn-outline-info ">
     <input type="radio" name="category" data-value="Telefon" data-color="info"id="telephone" autocomplete="off">Telefon</label>
                             <label class="btn btn-outline-secondary active">
     <input type="radio" name="category" data-value="Inne" data-color="secondary" id="other" autocomplete="off" checked>Inne</label>
 
                         </div>
                         <br>
-                        <input id="addButton" type="submit" class="btn btn-outline-danger"></input>
+                        <input id="addButton" type="submit" class="btn btn-outline-danger "></input>
 
                     </form>
                 </div>
                 <div class="row">
-                    <div class="col-sm-6 ">
+                    <div class="col-md-6 ">
                         <h3>Zadania:</h3>
                         <ul id="listToDo" class="list-group">
-                            <p>Dodaj zadania do wykonania</p>
+                            
                         </ul>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-md-6">
                         <h3>Wykonane zadania:</h3>
-                        <ul id="#listDone" class="list-group">
-                            <p>nie masz wykonanych zadań</p>
+                        <ul id="listDone" class="list-group">
+                            
                         </ul>
                     </div>
                 </div>

@@ -3,14 +3,27 @@
 
 .full-page {
   padding: 5%;
-  min-height: 100vh; }
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  overflow: hidden; }
 
 #inputField {
   width: 80%;
   margin-left: auto;
   margin-right: auto; }
 
+.newTaskForm {
+  box-sizing: border-box; }
+
 li label {
   margin: 0; }
+
+@media (max-width: 500px) {
+  .full-page {
+    padding: 2%; }
+
+  .form-section {
+    padding: 0; } }
 
 /*# sourceMappingURL=style.css.map */
