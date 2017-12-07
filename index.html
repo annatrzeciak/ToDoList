@@ -2,7 +2,7 @@
 <html lang="pl">
 
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>ToDoList</title>
@@ -14,17 +14,20 @@
 
     <section id="container-fluid" class="full-page bg-dark text-light">
         <div class="row">
-            <div class="col-lg-10 offset-lg-1 text-center">
+            <div class="col-lg-10 offset-lg-1 text-center content">
                 <h1 class="space text-center">To do List</h1>
                 <div class="col-xl-10 offset-xl-1 form-section">
-                    <form class="newTaskForm space">
-
-                        <input id="inputField" type="text" class="form-control space " id="newTask" placeholder="wpisz nowe zadanie">
+                    <form class="newTaskForm space" method="get" action="" target="_self">
+                        <input id="inputField" type="text" class="form-control space" placeholder="Wpisz nowe zadanie" required="true">
+<div class="invalid-feedback">
+        Please provide a valid city.
+      </div>
                         <h5>Kategoria: </h5>
                         <div id="categoryButtons" class="btn-group space" data-toggle="buttons">
+
                             <label class="btn btn-outline-success">
     <input type="radio" name="category" data-value="Dom" data-color="success"id="home" autocomplete="off">Dom</label>
-                            <label class="btn btn-outline-primary " >
+                            <label class="btn btn-outline-primary ">
     <input type="radio" name="category" data-value="Osobiste" data-color="primary"id="personal" autocomplete="off">Osobiste</label>
                             <label class="btn btn-outline-warning ">
     <input type="radio" name="category" data-value="Praca" data-color="warning"id="work" autocomplete="off">Praca</label>
@@ -35,21 +38,21 @@
 
                         </div>
                         <br>
-                        <input id="addButton" type="submit" class="btn btn-outline-danger "></input>
+                        <input id="addButton" type="submit" class="btn btn-outline-danger" value="Dodaj" ></input>
 
                     </form>
                 </div>
                 <div class="row">
-                    <div class="col-md-6 ">
+                    <div class="col-md-6 space content">
                         <h3>Zadania:</h3>
                         <ul id="listToDo" class="list-group">
-                            
+
                         </ul>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 space content">
                         <h3>Wykonane zadania:</h3>
                         <ul id="listDone" class="list-group">
-                            
+
                         </ul>
                     </div>
                 </div>

@@ -1,25 +1,24 @@
 const itemsToDo = JSON.parse(localStorage.getItem('itemsToDo')) || [];
 const itemsDone = JSON.parse(localStorage.getItem('itemsDone')) || [];
-const addButton = $("#addButton");
 const inputField = $("#inputField");
 const form = $('.newTaskForm');
-
-
+const addButton = $('#addButton');
 
 function addItem(e) {
-    const categoryName = $('.active').children().attr('data-value');
-    const categoryColor = $('.active').children().attr('data-color');
-    e.preventDefault();
-
-    var item = {
-        text: inputField.val(), //pobieranie wartości w jQuery
-        category: categoryName,
-        color: categoryColor
+    if (inputField.val() !== "") {
+        const categoryName = $('.active').children().attr('data-value');
+        const categoryColor = $('.active').children().attr('data-color');
+        e.preventDefault();
+        var item = {
+            text: inputField.val(), 
+            category: categoryName,
+            color: categoryColor
+        }
+        itemsToDo.push(item);
+        localStorage.setItem('itemsToDo', JSON.stringify(itemsToDo));
+        form.trigger('reset'); 
+        showToDoItems();
     }
-    itemsToDo.push(item);
-    localStorage.setItem('itemsToDo', JSON.stringify(itemsToDo));
-    form.trigger('reset'); //czyszczenie formularza w jQuery
-    showToDoItems();
 }
 
 function showToDoItems() {
@@ -46,10 +45,8 @@ function showDoneItems() {
     }
 }
 
-
 function deleteItem(index, array) {
-
-    array.splice(index, index+1);
+    array.splice(index, index + 1);
     localStorage.setItem("itemsToDo", JSON.stringify(itemsToDo));
     localStorage.setItem("itemsDone", JSON.stringify(itemsDone));
     showToDoItems();
@@ -57,21 +54,15 @@ function deleteItem(index, array) {
 }
 
 function taskDone(index) {
-  
-    itemsDone.push(...itemsToDo.slice(index, index+1));
+    itemsDone.push(...itemsToDo.slice(index, index + 1));
     deleteItem(index, itemsToDo);
-
-
-
 }
 
 function taskNotDone(index) {
-  
-    itemsToDo.push(...itemsDone.slice(index, index+1));
+    itemsToDo.push(...itemsDone.slice(index, index + 1));
     deleteItem(index, itemsDone);
-
 }
 
+addButton.click(addItem);
 $(document).ready(showToDoItems);
 $(document).ready(showDoneItems);
-addButton.click(addItem);
